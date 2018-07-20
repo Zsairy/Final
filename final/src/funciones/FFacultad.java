@@ -1,5 +1,9 @@
-
-package proyectofinal.entidades.impl;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package funciones;
 
 import accesodatos.AccesoDatos;
 import accesodatos.ConjuntoResultado;
@@ -7,28 +11,23 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import accesodatos.Parametro;
 import java.sql.SQLException;
-import proyectofinal.entidades.Nivel;
+import entidades.Facultad;
 
 /**
  *
  * @author franc
  */
-public class FNivel implements Serializable {
+public class FFacultad implements Serializable {
 
-    public static boolean Insertar(Nivel nivel) throws Exception {
+    public static boolean Insertar(Facultad facultad) throws Exception {
         boolean eje = false;
         try {
             ArrayList<Parametro> lstP = new ArrayList<Parametro>();
-            String sql = "select * from actividades.finsertar_nivel(?,?,?,?,?,?)";
-            
-            
-            lstP.add(new Parametro(1, nivel.getCodigo()));
-            lstP.add(new Parametro(2, nivel.getCodigo_sicoa()));
-            lstP.add(new Parametro(3, nivel.getNombre()));
-            lstP.add(new Parametro(4, nivel.getParalelo()));
-            lstP.add(new Parametro(5, nivel.getModalidad()));
-            lstP.add(new Parametro(6, nivel.getCodigo_escuela()));
-            
+            String sql = "select * from actividades.finsertar_facultad(?,?,?,?)";
+            lstP.add(new Parametro(1, facultad.getCodigo()));
+            lstP.add(new Parametro(2, facultad.getNombre()));
+            lstP.add(new Parametro(3, facultad.getDescripcion()));
+            lstP.add(new Parametro(4, facultad.getCodigo_sicoa()));
             ConjuntoResultado rs = AccesoDatos.ejecutaQuery(sql, lstP);
             while (rs.next()) {
                 if (rs.getString(0).equals("true"));
@@ -40,13 +39,13 @@ public class FNivel implements Serializable {
         return eje;
     }
 
-    public static ArrayList<Nivel> llenarNiveles(ConjuntoResultado rs) throws Exception {
-        ArrayList<Nivel> lst = new ArrayList<Nivel>();
-        Nivel nivel = null;
+    public static ArrayList<Facultad> llenarFacultades(ConjuntoResultado rs) throws Exception {
+        ArrayList<Facultad> lst = new ArrayList<Facultad>();
+        Facultad facultad = null;
         try {
             while (rs.next()) {
-                nivel = new Nivel(rs.getInt("pcodigo"), rs.getInt("pcodigo_sicoa"), rs.getString("pnombre"), rs.getString("pparalelo"), rs.getString("pmodalidad"), rs.getInt("pcodigo_escuela"));
-                lst.add(nivel);
+                facultad = new Facultad(rs.getInt("pcodigo"), rs.getString("pnombre"), rs.getString("pdescripcion"), rs.getInt("pcodigo_sicoa"));
+                lst.add(facultad);
             }
         } catch (Exception e) {
             lst.clear();
@@ -55,12 +54,12 @@ public class FNivel implements Serializable {
         return lst;
     }
 
-    public static ArrayList<Nivel> ObtenerNiveles() throws Exception {
-        ArrayList<Nivel> lst = new ArrayList<Nivel>();
+    public static ArrayList<Facultad> ObtenerFacultades() throws Exception {
+        ArrayList<Facultad> lst = new ArrayList<Facultad>();
         try {
-            String sql = "select * from actividades.fc_obtener_nivel()";
+            String sql = "select * from actividades.fc_obtener_facultad()";
             ConjuntoResultado rs = AccesoDatos.ejecutaQuery(sql);
-            lst = llenarNiveles(rs);
+            lst = llenarFacultades(rs);
             rs = null;
 
         } catch (SQLException exConec) {
@@ -69,15 +68,15 @@ public class FNivel implements Serializable {
         return lst;
     }
 
-    public static Nivel ObtenerNivelDadoCodigo(int codigo) throws Exception {
-        Nivel lst;
+    public static Facultad ObtenerFacultadDadoCodigo(int codigo) throws Exception {
+        Facultad lst;
         try {
             ArrayList<Parametro> lstP = new ArrayList<Parametro>();
-            String sql = "select * from actividades.fc_obtener_nivel_dado_codigo(?)";
+            String sql = "select * from actividades.fc_obtener_facultad_dado_codigo(?)";
             lstP.add(new Parametro(1, codigo));
             ConjuntoResultado rs = AccesoDatos.ejecutaQuery(sql, lstP);
-            lst = new Nivel();
-            lst = llenarNiveles(rs).get(0);
+            lst = new Facultad();
+            lst = llenarFacultades(rs).get(0);
             rs = null;
         } catch (SQLException exConec) {
             throw new Exception(exConec.getMessage());
@@ -85,17 +84,15 @@ public class FNivel implements Serializable {
         return lst;
     }
 
-    public static boolean actualizar(Nivel nivel) throws Exception {
+    public static boolean actualizar(Facultad facultad) throws Exception {
         boolean eje = false;
         try {
             ArrayList<Parametro> lstP = new ArrayList<Parametro>();
-            String sql = "select * from actividades.factualiza_nivel(?,?,?,?,?,?)";
-            lstP.add(new Parametro(1, nivel.getCodigo()));
-            lstP.add(new Parametro(2, nivel.getCodigo_sicoa()));
-            lstP.add(new Parametro(3, nivel.getNombre()));
-            lstP.add(new Parametro(4, nivel.getParalelo()));
-            lstP.add(new Parametro(5, nivel.getModalidad()));
-            lstP.add(new Parametro(6, nivel.getCodigo_escuela()));
+            String sql = "select * from actividades.factualiza_facultad(?,?,?,?)";
+            lstP.add(new Parametro(1, facultad.getNombre()));
+            lstP.add(new Parametro(2, facultad.getDescripcion()));
+            lstP.add(new Parametro(3, facultad.getCodigo_sicoa()));
+            lstP.add(new Parametro(4, facultad.getCodigo()));
             ConjuntoResultado rs = AccesoDatos.ejecutaQuery(sql, lstP);
             while (rs.next()) {
                 if (rs.getString(0).equals("true"));
@@ -107,12 +104,12 @@ public class FNivel implements Serializable {
         return eje;
     }
 
-    public static boolean eliminar(Nivel nivel) throws Exception {
+    public static boolean eliminar(Facultad facultad) throws Exception {
         boolean eje = false;
         try {
             ArrayList<Parametro> lstP = new ArrayList<Parametro>();
-            String sql = "select * from actividades.felimina_nivel(?)";
-            lstP.add(new Parametro(1, nivel.getCodigo()));
+            String sql = "select * from actividades.felimina_facultad(?)";
+            lstP.add(new Parametro(1, facultad.getCodigo()));
             ConjuntoResultado rs = AccesoDatos.ejecutaQuery(sql, lstP);
             while (rs.next()) {
                 if (rs.getString(0).equals("true"));
