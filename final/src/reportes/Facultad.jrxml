@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0ff9b32-769d-43a9-8fe8-eb383469b848">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     facultad."codigo" AS facultad_codigo,
+     facultad."nombre" AS facultad_nombre,
+     facultad."descripcion" AS facultad_descripcion,
+     facultad."codigo_sicoa" AS facultad_codigo_sicoa
+FROM
+     "actividades"."facultad" facultad]]>
+	</queryString>
+	<field name="facultad_codigo" class="java.lang.Integer"/>
+	<field name="facultad_nombre" class="java.lang.String"/>
+	<field name="facultad_descripcion" class="java.lang.String"/>
+	<field name="facultad_codigo_sicoa" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="98" y="10" width="427" height="31" uuid="8466bb80-d33d-41f2-83b7-a85c5ea5794e"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDAD NACIONAL DE CHIMBORAZO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="63" width="537" height="1" uuid="3abf4f3b-925d-4ac9-bec8-568119c94f39"/>
+			</line>
+			<line>
+				<reportElement x="8" y="6" width="537" height="1" uuid="3973fd7a-e505-4343-a1a4-26e6e38c8f03"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="-37" width="189" height="31" uuid="6909a501-e164-483c-8fee-731303a03e13"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ROLES]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="8" y="2" width="539" height="26" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="a1248354-d9fb-4bf5-9d9b-304fa136fda4"/>
+				<staticText>
+					<reportElement x="17" y="0" width="100" height="20" uuid="abfa40f9-ff1e-4f55-bece-290c172926c7"/>
+					<text><![CDATA[facultad_codigo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="163" y="0" width="100" height="20" uuid="f4dc383b-d837-4190-b780-ba3a6e08461a"/>
+					<text><![CDATA[facultad_nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="313" y="0" width="100" height="20" uuid="3c50a281-0d16-43ee-88ce-4c90118d3815"/>
+					<text><![CDATA[facultad_descripcion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="437" y="0" width="100" height="20" uuid="7f128c7d-64f8-4987-a334-7ff76b547778"/>
+					<text><![CDATA[facultad_codigo_sicoa]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="25" y="16" width="100" height="20" uuid="ddf00eff-f757-4c2a-bc67-0cf255218820"/>
+				<textFieldExpression><![CDATA[$F{facultad_codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="16" width="207" height="20" uuid="f0d5bc43-3537-4248-bbde-61628c7f6ab5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facultad_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="321" y="16" width="100" height="20" uuid="eeca0e0d-5fa7-4e8b-bde8-e41bb625368e"/>
+				<textFieldExpression><![CDATA[$F{facultad_descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="16" width="100" height="20" uuid="eb2dc3f5-93f6-46ed-ac69-ee3aa9371d96"/>
+				<textFieldExpression><![CDATA[$F{facultad_codigo_sicoa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="449" y="33" width="100" height="20" uuid="524a23ce-e6c5-4182-bbcd-e917ff2d44a6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="34" width="100" height="20" uuid="95230123-f289-4ddc-8b28-ac90f2597415"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
