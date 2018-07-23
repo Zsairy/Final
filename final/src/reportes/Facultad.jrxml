@@ -37,17 +37,17 @@ FROM
 			<line>
 				<reportElement x="8" y="6" width="537" height="1" uuid="3973fd7a-e505-4343-a1a4-26e6e38c8f03"/>
 			</line>
+			<staticText>
+				<reportElement x="165" y="33" width="256" height="31" uuid="6909a501-e164-483c-8fee-731303a03e13"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE FACULTADES]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="28" splitType="Stretch">
-			<staticText>
-				<reportElement x="189" y="-37" width="189" height="31" uuid="6909a501-e164-483c-8fee-731303a03e13"/>
-				<textElement>
-					<font size="18" isBold="true"/>
-				</textElement>
-				<text><![CDATA[REPORTE DE ROLES]]></text>
-			</staticText>
 			<frame>
 				<reportElement mode="Opaque" x="8" y="2" width="539" height="26" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="a1248354-d9fb-4bf5-9d9b-304fa136fda4"/>
 				<staticText>
