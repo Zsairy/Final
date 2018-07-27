@@ -41,7 +41,7 @@ public class FEscuela implements Serializable {
         Escuela escuela = null;
         try {
             while (rs.next()) {
-                escuela = new Escuela(rs.getInt("pcodigo"), rs.getInt("pcodigofacultad"), rs.getString("pnombre"), rs.getString("pdescripcion"), rs.getInt("pcodigo_sicoa"));
+                escuela = new Escuela(rs.getInt("pcodigo"), rs.getInt("pcodigo_facultad"), rs.getString("pnombre"), rs.getString("pdescripcion"), rs.getInt("pcodigo_sicoa"));
                 lst.add(escuela);
             }
         } catch (Exception e) {

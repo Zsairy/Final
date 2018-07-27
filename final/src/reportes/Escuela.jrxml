@@ -1,29 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD JasperReport//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
-
-<jasperReport name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-    <background>
-        <band/>
-    </background>
-    <title>
-        <band height="79"/>
-    </title>
-    <pageHeader>
-        <band height="35"/>
-    </pageHeader>
-    <columnHeader>
-        <band height="61"/>
-    </columnHeader>
-    <detail>
-        <band height="125"/>
-    </detail>
-    <columnFooter>
-        <band height="45"/>
-    </columnFooter>
-    <pageFooter>
-        <band height="54"/>
-    </pageFooter>
-    <summary>
-        <band height="42"/>
-    </summary>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0ff9b32-769d-43a9-8fe8-eb383469b848">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     escuela."codigo" AS escuela_codigo,
+     escuela."codigo_facultad" AS escuela_codigo_facultad,
+     escuela."nombre" AS escuela_nombre,
+     escuela."descripcion" AS escuela_descripcion,
+     escuela."codigo_sicoa" AS escuela_codigo_sicoa
+FROM
+     "actividades"."escuela" escuela]]>
+	</queryString>
+	<field name="escuela_codigo" class="java.lang.Integer"/>
+	<field name="escuela_codigo_facultad" class="java.lang.Integer"/>
+	<field name="escuela_nombre" class="java.lang.String"/>
+	<field name="escuela_descripcion" class="java.lang.String"/>
+	<field name="escuela_codigo_sicoa" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch">
+			<image>
+				<reportElement x="210" y="9" width="95" height="105" uuid="eb04b5ab-6b1d-4b3b-87e5-683a93cc506e"/>
+				<imageExpression><![CDATA["C:\\Users\\franc\\Desktop\\project\\Final\\final\\build\\classes\\imagenes\\unach_1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="98" y="10" width="427" height="31" uuid="8466bb80-d33d-41f2-83b7-a85c5ea5794e"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDAD NACIONAL DE CHIMBORAZO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="63" width="537" height="1" uuid="3abf4f3b-925d-4ac9-bec8-568119c94f39"/>
+			</line>
+			<line>
+				<reportElement x="8" y="6" width="537" height="1" uuid="3973fd7a-e505-4343-a1a4-26e6e38c8f03"/>
+			</line>
+			<staticText>
+				<reportElement x="171" y="33" width="274" height="31" uuid="11215a75-54b5-4731-a3fe-202009567578"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE ESCUELAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="8" y="2" width="539" height="26" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="a1248354-d9fb-4bf5-9d9b-304fa136fda4"/>
+				<staticText>
+					<reportElement x="2" y="0" width="47" height="20" uuid="57f4c0c1-2a01-46a5-9d83-335afbe51f05"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Codigo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="63" y="0" width="100" height="20" uuid="c27d4d34-a766-4f6a-a80b-945b350deb36"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Codigo facultad]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="185" y="0" width="61" height="20" uuid="5a15ff93-1a1b-47dc-aeb2-4f8f48dcef08"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="297" y="0" width="100" height="20" uuid="39700562-0eda-4e00-8bb5-207ea073ca88"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Descripcion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="457" y="0" width="80" height="20" uuid="7d1ec566-89f6-44a2-a2c7-0ed6fc4d85ca"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Codigo sicoa]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<textField>
+				<reportElement x="8" y="16" width="36" height="42" uuid="c7c23940-5b86-410a-a530-0f9158dfd3ed"/>
+				<textFieldExpression><![CDATA[$F{escuela_codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="16" width="39" height="42" uuid="5e9d2933-6c86-445d-8f0d-b2041c16b282"/>
+				<textFieldExpression><![CDATA[$F{escuela_codigo_facultad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="16" width="141" height="42" uuid="cfa38e17-ac20-4248-85d6-eccbddb8b73d"/>
+				<textFieldExpression><![CDATA[$F{escuela_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="16" width="172" height="42" uuid="3f387193-83d2-4e62-9efd-5f92218eadca"/>
+				<textFieldExpression><![CDATA[$F{escuela_descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="16" width="60" height="42" uuid="6f64e4fa-9551-4ea5-ae7e-b2501f642adc"/>
+				<textFieldExpression><![CDATA[$F{escuela_codigo_sicoa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="449" y="33" width="100" height="20" uuid="524a23ce-e6c5-4182-bbcd-e917ff2d44a6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="34" width="100" height="20" uuid="95230123-f289-4ddc-8b28-ac90f2597415"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>

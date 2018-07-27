@@ -1,29 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD JasperReport//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
-
-<jasperReport name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-    <background>
-        <band/>
-    </background>
-    <title>
-        <band height="79"/>
-    </title>
-    <pageHeader>
-        <band height="35"/>
-    </pageHeader>
-    <columnHeader>
-        <band height="61"/>
-    </columnHeader>
-    <detail>
-        <band height="125"/>
-    </detail>
-    <columnFooter>
-        <band height="45"/>
-    </columnFooter>
-    <pageFooter>
-        <band height="54"/>
-    </pageFooter>
-    <summary>
-        <band height="42"/>
-    </summary>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0ff9b32-769d-43a9-8fe8-eb383469b848">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     nivel."codigo" AS nivel_codigo,
+     nivel."codigo_sicoa" AS nivel_codigo_sicoa,
+     nivel."nombre" AS nivel_nombre,
+     nivel."paralelo" AS nivel_paralelo,
+     nivel."modalidad" AS nivel_modalidad,
+     nivel."codigo_escuela" AS nivel_codigo_escuela
+FROM
+     "actividades"."nivel" nivel]]>
+	</queryString>
+	<field name="nivel_codigo" class="java.lang.Integer"/>
+	<field name="nivel_codigo_sicoa" class="java.lang.Integer"/>
+	<field name="nivel_nombre" class="java.lang.String"/>
+	<field name="nivel_paralelo" class="java.lang.String"/>
+	<field name="nivel_modalidad" class="java.lang.String"/>
+	<field name="nivel_codigo_escuela" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch">
+			<image>
+				<reportElement x="210" y="9" width="95" height="105" uuid="eb04b5ab-6b1d-4b3b-87e5-683a93cc506e"/>
+				<imageExpression><![CDATA["C:\\Users\\franc\\Desktop\\project\\Final\\final\\build\\classes\\imagenes\\unach_1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="98" y="10" width="427" height="31" uuid="8466bb80-d33d-41f2-83b7-a85c5ea5794e"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDAD NACIONAL DE CHIMBORAZO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="63" width="537" height="1" uuid="3abf4f3b-925d-4ac9-bec8-568119c94f39"/>
+			</line>
+			<line>
+				<reportElement x="8" y="6" width="537" height="1" uuid="3973fd7a-e505-4343-a1a4-26e6e38c8f03"/>
+			</line>
+			<staticText>
+				<reportElement x="199" y="32" width="222" height="31" uuid="2c6ddc1e-7cd6-4ab5-9de6-0797649819fe"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE NIVELES]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="8" y="2" width="539" height="26" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="a1248354-d9fb-4bf5-9d9b-304fa136fda4"/>
+				<staticText>
+					<reportElement x="13" y="0" width="49" height="20" uuid="e37fa338-40da-4c95-bfba-a23e4863131f"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Codigo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="73" y="0" width="80" height="20" uuid="a2d2e83b-b5e0-48e6-ae01-7e513e4e71bd"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Codigo sicoa]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="169" y="0" width="53" height="20" uuid="1fce3610-6ef7-4971-a327-e1933ad70d63"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="0" width="48" height="20" uuid="6d30d8dd-df00-45b5-876d-8049d70d0188"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Paralelo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="343" y="0" width="85" height="20" uuid="b03a233c-9d6e-408b-a665-fd2240957214"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Modalidad]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="428" y="0" width="100" height="20" uuid="92efc257-66e7-4a8d-ba94-75932b3d9e98"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Codigo escuela]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="8" y="16" width="34" height="20" uuid="24ddcf2a-dc39-4f4d-af68-3e039e94aa91"/>
+				<textFieldExpression><![CDATA[$F{nivel_codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="16" width="40" height="20" uuid="aab64f19-7862-4fef-a3dc-97bb26bb8cbf"/>
+				<textFieldExpression><![CDATA[$F{nivel_codigo_sicoa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="16" width="118" height="20" uuid="84432efe-fbc3-40ac-9df0-1ea6a309dfbd"/>
+				<textFieldExpression><![CDATA[$F{nivel_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="16" width="48" height="20" uuid="b8c6f375-454c-4f3b-8252-527bb45d491f"/>
+				<textFieldExpression><![CDATA[$F{nivel_paralelo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="16" width="100" height="20" uuid="7cf1f9c2-8bf3-4a45-8993-115cab963179"/>
+				<textFieldExpression><![CDATA[$F{nivel_modalidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="16" width="78" height="20" uuid="d50a7ecc-e7b0-4446-a564-8c7de7bc1047"/>
+				<textFieldExpression><![CDATA[$F{nivel_codigo_escuela}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="449" y="33" width="100" height="20" uuid="524a23ce-e6c5-4182-bbcd-e917ff2d44a6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="34" width="100" height="20" uuid="95230123-f289-4ddc-8b28-ac90f2597415"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>

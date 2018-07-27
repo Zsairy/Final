@@ -20,7 +20,12 @@ FROM
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="114" splitType="Stretch"/>
+		<band height="114" splitType="Stretch">
+			<image>
+				<reportElement x="210" y="9" width="95" height="105" uuid="eb04b5ab-6b1d-4b3b-87e5-683a93cc506e"/>
+				<imageExpression><![CDATA["C:\\Users\\franc\\Desktop\\project\\Final\\final\\build\\classes\\imagenes\\unach_1.jpg"]]></imageExpression>
+			</image>
+		</band>
 	</title>
 	<pageHeader>
 		<band height="74" splitType="Stretch">
@@ -38,7 +43,7 @@ FROM
 				<reportElement x="8" y="6" width="537" height="1" uuid="3973fd7a-e505-4343-a1a4-26e6e38c8f03"/>
 			</line>
 			<staticText>
-				<reportElement x="165" y="33" width="256" height="31" uuid="6909a501-e164-483c-8fee-731303a03e13"/>
+				<reportElement x="171" y="32" width="250" height="31" uuid="1add4f89-874a-4f09-90c8-35d2e34f9e5f"/>
 				<textElement>
 					<font size="18" isBold="true"/>
 				</textElement>
@@ -51,20 +56,32 @@ FROM
 			<frame>
 				<reportElement mode="Opaque" x="8" y="2" width="539" height="26" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="a1248354-d9fb-4bf5-9d9b-304fa136fda4"/>
 				<staticText>
-					<reportElement x="17" y="0" width="100" height="20" uuid="abfa40f9-ff1e-4f55-bece-290c172926c7"/>
-					<text><![CDATA[facultad_codigo]]></text>
+					<reportElement x="22" y="0" width="51" height="20" uuid="e9a96b6b-b4cb-453b-a8a0-2814edc2ae7b"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Codigo]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="163" y="0" width="100" height="20" uuid="f4dc383b-d837-4190-b780-ba3a6e08461a"/>
-					<text><![CDATA[facultad_nombre]]></text>
+					<reportElement x="102" y="0" width="100" height="20" uuid="7ac09a27-cae6-42ee-904c-43c0b503db48"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombre]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="313" y="0" width="100" height="20" uuid="3c50a281-0d16-43ee-88ce-4c90118d3815"/>
-					<text><![CDATA[facultad_descripcion]]></text>
+					<reportElement x="264" y="0" width="100" height="20" uuid="89b0e2a1-2478-466e-a3b2-d9f67b239502"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Descripcion]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="437" y="0" width="100" height="20" uuid="7f128c7d-64f8-4987-a334-7ff76b547778"/>
-					<text><![CDATA[facultad_codigo_sicoa]]></text>
+					<reportElement x="417" y="0" width="100" height="20" uuid="702ddd1c-63af-4ce4-b40b-65b48aadd1ff"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Codigo facultad]]></text>
 				</staticText>
 			</frame>
 		</band>
@@ -72,22 +89,19 @@ FROM
 	<detail>
 		<band height="36" splitType="Stretch">
 			<textField>
-				<reportElement x="25" y="16" width="100" height="20" uuid="ddf00eff-f757-4c2a-bc67-0cf255218820"/>
+				<reportElement x="30" y="16" width="37" height="20" uuid="5144e551-331c-455b-88fe-c9d43a9fae4d"/>
 				<textFieldExpression><![CDATA[$F{facultad_codigo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="98" y="16" width="207" height="20" uuid="f0d5bc43-3537-4248-bbde-61628c7f6ab5"/>
-				<textElement>
-					<font size="8"/>
-				</textElement>
+				<reportElement x="81" y="16" width="169" height="20" uuid="93e2cbae-728b-49db-9f4b-c00eb37f7bfd"/>
 				<textFieldExpression><![CDATA[$F{facultad_nombre}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="321" y="16" width="100" height="20" uuid="eeca0e0d-5fa7-4e8b-bde8-e41bb625368e"/>
+				<reportElement x="272" y="16" width="137" height="20" uuid="5a9f09f5-481f-4131-8e84-d8b3de43b4f3"/>
 				<textFieldExpression><![CDATA[$F{facultad_descripcion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="449" y="16" width="100" height="20" uuid="eb2dc3f5-93f6-46ed-ac69-ee3aa9371d96"/>
+				<reportElement x="449" y="16" width="76" height="20" uuid="006496d0-9e9e-4a6b-9b8d-7fe578fe8438"/>
 				<textFieldExpression><![CDATA[$F{facultad_codigo_sicoa}]]></textFieldExpression>
 			</textField>
 		</band>
