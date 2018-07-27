@@ -90,13 +90,15 @@ public class FNivel implements Serializable {
         try {
             ArrayList<Parametro> lstP = new ArrayList<Parametro>();
             String sql = "select * from actividades.factualiza_nivel(?,?,?,?,?,?)";
-            lstP.add(new Parametro(1, nivel.getCodigo()));
-            lstP.add(new Parametro(2, nivel.getCodigo_sicoa()));
-            lstP.add(new Parametro(3, nivel.getNombre()));
-            lstP.add(new Parametro(4, nivel.getParalelo()));
-            lstP.add(new Parametro(5, nivel.getModalidad()));
-            lstP.add(new Parametro(6, nivel.getCodigo_escuela()));
+           
+            lstP.add(new Parametro(1, nivel.getCodigo_sicoa()));
+            lstP.add(new Parametro(2, nivel.getNombre()));
+            lstP.add(new Parametro(3, nivel.getParalelo()));
+            lstP.add(new Parametro(4, nivel.getModalidad()));
+            lstP.add(new Parametro(5, nivel.getCodigo_escuela()));
+            lstP.add(new Parametro(6, nivel.getCodigo()));
             ConjuntoResultado rs = AccesoDatos.ejecutaQuery(sql, lstP);
+           
             while (rs.next()) {
                 if (rs.getString(0).equals("true"));
                 eje = true;

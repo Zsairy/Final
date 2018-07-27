@@ -86,11 +86,12 @@ public class FEscuela implements Serializable {
         try {
             ArrayList<Parametro> lstP = new ArrayList<Parametro>();
             String sql = "select * from actividades.factualiza_escuela(?,?,?,?,?)";
-            lstP.add(new Parametro(1, escuela.getCodigo()));
-            lstP.add(new Parametro(2, escuela.getCodigo_facultad()));
-            lstP.add(new Parametro(3, escuela.getNombre()));
-            lstP.add(new Parametro(4, escuela.getDescripcion()));
-            lstP.add(new Parametro(5, escuela.getCodigo_sicoa()));
+          
+            lstP.add(new Parametro(1, escuela.getCodigo_facultad()));
+            lstP.add(new Parametro(2, escuela.getNombre()));
+            lstP.add(new Parametro(3, escuela.getDescripcion()));
+            lstP.add(new Parametro(4, escuela.getCodigo_sicoa()));
+            lstP.add(new Parametro(5, escuela.getCodigo()));
             ConjuntoResultado rs = AccesoDatos.ejecutaQuery(sql, lstP);
             while (rs.next()) {
                 if (rs.getString(0).equals("true"));
