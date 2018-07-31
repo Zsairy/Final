@@ -25,7 +25,7 @@ public class Reportes {
         Connection con = null;
         con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/proyecto","tutorias","123");
         JasperReport reporte = null;
-        reporte = (JasperReport) JRLoader.loadObjectFromFile("C:\\Users\\franc\\Desktop\\project\\Final\\final\\src\\reportes\\Facultad.jasper");
+        reporte = (JasperReport) JRLoader.loadObjectFromFile("C:\\Users\\franc\\Desktop\\final\\Final\\final\\src\\reportes\\Facultad.jasper");
         JasperPrint print = JasperFillManager.fillReport(reporte , null, con);
         JasperViewer ver = new JasperViewer(print,false);
         ver.setTitle("Facultad");
@@ -35,7 +35,7 @@ public class Reportes {
         Connection con = null;
         con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/proyecto","tutorias","123");
         JasperReport reporte = null;
-        reporte = (JasperReport) JRLoader.loadObjectFromFile("C:\\Users\\franc\\Desktop\\project\\Final\\final\\src\\reportes\\Escuela.jasper");
+        reporte = (JasperReport) JRLoader.loadObjectFromFile("C:\\Users\\franc\\Desktop\\final\\Final\\final\\src\\reportes\\Escuela.jasper");
         JasperPrint print = JasperFillManager.fillReport(reporte , null, con);
         JasperViewer ver = new JasperViewer(print,false);
         ver.setTitle("Escuela");
@@ -45,7 +45,7 @@ public class Reportes {
         Connection con = null;
         con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/proyecto","tutorias","123");
         JasperReport reporte = null;
-        reporte = (JasperReport) JRLoader.loadObjectFromFile("C:\\Users\\franc\\Desktop\\project\\Final\\final\\src\\reportes\\Nivel.jasper");
+        reporte = (JasperReport) JRLoader.loadObjectFromFile("C:\\Users\\franc\\Desktop\\final\\Final\\final\\src\\reportes\\Nivel.jasper");
         JasperPrint print = JasperFillManager.fillReport(reporte , null, con);
         JasperViewer ver = new JasperViewer(print,false);
         ver.setTitle("Nivel");

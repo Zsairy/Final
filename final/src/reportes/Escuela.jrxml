@@ -24,8 +24,8 @@ FROM
 	<title>
 		<band height="114" splitType="Stretch">
 			<image>
-				<reportElement x="210" y="9" width="95" height="105" uuid="eb04b5ab-6b1d-4b3b-87e5-683a93cc506e"/>
-				<imageExpression><![CDATA["C:\\Users\\franc\\Desktop\\project\\Final\\final\\build\\classes\\imagenes\\unach_1.jpg"]]></imageExpression>
+				<reportElement x="238" y="0" width="95" height="105" uuid="191da732-ed23-4c52-99ad-4cf7636b2337"/>
+				<imageExpression><![CDATA["C:\\Users\\franc\\Desktop\\final\\Final\\final\\build\\classes\\imagenes\\unach.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>
@@ -45,7 +45,7 @@ FROM
 				<reportElement x="8" y="6" width="537" height="1" uuid="3973fd7a-e505-4343-a1a4-26e6e38c8f03"/>
 			</line>
 			<staticText>
-				<reportElement x="171" y="33" width="274" height="31" uuid="11215a75-54b5-4731-a3fe-202009567578"/>
+				<reportElement x="166" y="32" width="265" height="31" uuid="b6598b87-9516-40de-b8e9-92c766087b21"/>
 				<textElement>
 					<font size="18" isBold="true"/>
 				</textElement>
@@ -58,63 +58,63 @@ FROM
 			<frame>
 				<reportElement mode="Opaque" x="8" y="2" width="539" height="26" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="a1248354-d9fb-4bf5-9d9b-304fa136fda4"/>
 				<staticText>
-					<reportElement x="2" y="0" width="47" height="20" uuid="57f4c0c1-2a01-46a5-9d83-335afbe51f05"/>
+					<reportElement x="8" y="0" width="100" height="20" uuid="4b4ca97f-b954-4d13-81b3-460712ceceb6"/>
 					<textElement>
 						<font size="12" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Codigo]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="63" y="0" width="100" height="20" uuid="c27d4d34-a766-4f6a-a80b-945b350deb36"/>
+					<reportElement x="70" y="0" width="100" height="20" uuid="b890f2c8-8597-4708-aedf-1a980348a19c"/>
 					<textElement>
 						<font size="12" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Codigo facultad]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="185" y="0" width="61" height="20" uuid="5a15ff93-1a1b-47dc-aeb2-4f8f48dcef08"/>
-					<textElement>
-						<font size="12" isBold="true"/>
-					</textElement>
-					<text><![CDATA[Nombre]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="297" y="0" width="100" height="20" uuid="39700562-0eda-4e00-8bb5-207ea073ca88"/>
+					<reportElement x="325" y="6" width="100" height="20" uuid="0bf9b676-2094-418f-8c55-1d68a7536aa8"/>
 					<textElement>
 						<font size="12" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Descripcion]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="457" y="0" width="80" height="20" uuid="7d1ec566-89f6-44a2-a2c7-0ed6fc4d85ca"/>
+					<reportElement x="441" y="0" width="96" height="20" uuid="8f0739f2-7618-4226-8981-ad84ea87de9d"/>
 					<textElement>
 						<font size="12" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Codigo sicoa]]></text>
 				</staticText>
 			</frame>
+			<staticText>
+				<reportElement x="219" y="2" width="87" height="20" uuid="a25bcca7-e838-420b-a0a6-a226eef674b7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="66" splitType="Stretch">
+		<band height="36" splitType="Stretch">
 			<textField>
-				<reportElement x="8" y="16" width="36" height="42" uuid="c7c23940-5b86-410a-a530-0f9158dfd3ed"/>
+				<reportElement x="16" y="0" width="36" height="36" uuid="cf1bbf24-3618-4d65-8ea8-76e26cf01d64"/>
 				<textFieldExpression><![CDATA[$F{escuela_codigo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="71" y="16" width="39" height="42" uuid="5e9d2933-6c86-445d-8f0d-b2041c16b282"/>
+				<reportElement x="78" y="0" width="60" height="36" uuid="ebc13494-eddf-48f9-96fc-3c5e436e469d"/>
 				<textFieldExpression><![CDATA[$F{escuela_codigo_facultad}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="137" y="16" width="141" height="42" uuid="cfa38e17-ac20-4248-85d6-eccbddb8b73d"/>
+				<reportElement x="166" y="0" width="127" height="36" uuid="a11e16ec-55cd-4e02-9698-73ba3cbd9c1f"/>
 				<textFieldExpression><![CDATA[$F{escuela_nombre}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="293" y="16" width="172" height="42" uuid="3f387193-83d2-4e62-9efd-5f92218eadca"/>
+				<reportElement x="306" y="0" width="125" height="36" uuid="c0135f65-06f9-4312-b872-dd21df045ca1"/>
 				<textFieldExpression><![CDATA[$F{escuela_descripcion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="485" y="16" width="60" height="42" uuid="6f64e4fa-9551-4ea5-ae7e-b2501f642adc"/>
+				<reportElement x="455" y="0" width="90" height="36" uuid="8056f8e2-4d4a-413c-ba3e-d795b799a32c"/>
 				<textFieldExpression><![CDATA[$F{escuela_codigo_sicoa}]]></textFieldExpression>
 			</textField>
 		</band>

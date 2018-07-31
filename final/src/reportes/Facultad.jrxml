@@ -22,8 +22,8 @@ FROM
 	<title>
 		<band height="114" splitType="Stretch">
 			<image>
-				<reportElement x="210" y="9" width="95" height="105" uuid="eb04b5ab-6b1d-4b3b-87e5-683a93cc506e"/>
-				<imageExpression><![CDATA["C:\\Users\\franc\\Desktop\\project\\Final\\final\\build\\classes\\imagenes\\unach_1.jpg"]]></imageExpression>
+				<reportElement x="226" y="0" width="95" height="105" uuid="afa5722c-e8d8-4500-beed-c08c72915af7"/>
+				<imageExpression><![CDATA["C:\\Users\\franc\\Desktop\\final\\Final\\final\\build\\classes\\imagenes\\unach.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>
@@ -43,7 +43,7 @@ FROM
 				<reportElement x="8" y="6" width="537" height="1" uuid="3973fd7a-e505-4343-a1a4-26e6e38c8f03"/>
 			</line>
 			<staticText>
-				<reportElement x="171" y="32" width="250" height="31" uuid="1add4f89-874a-4f09-90c8-35d2e34f9e5f"/>
+				<reportElement x="166" y="32" width="283" height="31" uuid="df923c04-1973-46ab-873d-298a72701798"/>
 				<textElement>
 					<font size="18" isBold="true"/>
 				</textElement>
@@ -56,32 +56,32 @@ FROM
 			<frame>
 				<reportElement mode="Opaque" x="8" y="2" width="539" height="26" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="a1248354-d9fb-4bf5-9d9b-304fa136fda4"/>
 				<staticText>
-					<reportElement x="22" y="0" width="51" height="20" uuid="e9a96b6b-b4cb-453b-a8a0-2814edc2ae7b"/>
+					<reportElement x="14" y="0" width="100" height="20" uuid="fecfd9bb-f738-43dc-805e-b5429295a9d3"/>
 					<textElement>
 						<font size="12" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Codigo]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="102" y="0" width="100" height="20" uuid="7ac09a27-cae6-42ee-904c-43c0b503db48"/>
+					<reportElement x="132" y="0" width="100" height="20" uuid="3798bfcb-1e12-46fb-906c-afd19c273582"/>
 					<textElement>
 						<font size="12" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Nombre]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="264" y="0" width="100" height="20" uuid="89b0e2a1-2478-466e-a3b2-d9f67b239502"/>
+					<reportElement x="286" y="0" width="100" height="20" uuid="271e65e2-848c-4b72-a1f0-4809339e6763"/>
 					<textElement>
 						<font size="12" isBold="true"/>
 					</textElement>
-					<text><![CDATA[Descripcion]]></text>
+					<text><![CDATA[Facultad]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="417" y="0" width="100" height="20" uuid="702ddd1c-63af-4ce4-b40b-65b48aadd1ff"/>
+					<reportElement x="420" y="0" width="100" height="20" uuid="68e63664-ee76-4f32-b707-94c1614cd2bd"/>
 					<textElement>
 						<font size="12" isBold="true"/>
 					</textElement>
-					<text><![CDATA[Codigo facultad]]></text>
+					<text><![CDATA[Codigo sicoa]]></text>
 				</staticText>
 			</frame>
 		</band>
@@ -89,19 +89,19 @@ FROM
 	<detail>
 		<band height="36" splitType="Stretch">
 			<textField>
-				<reportElement x="30" y="16" width="37" height="20" uuid="5144e551-331c-455b-88fe-c9d43a9fae4d"/>
+				<reportElement x="10" y="0" width="63" height="36" uuid="8e794c78-c48a-4ca6-9261-6e8035f6c5d6"/>
 				<textFieldExpression><![CDATA[$F{facultad_codigo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="81" y="16" width="169" height="20" uuid="93e2cbae-728b-49db-9f4b-c00eb37f7bfd"/>
+				<reportElement x="89" y="0" width="168" height="36" uuid="ca515e6d-6567-4584-8a1f-f1f8286894ff"/>
 				<textFieldExpression><![CDATA[$F{facultad_nombre}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="272" y="16" width="137" height="20" uuid="5a9f09f5-481f-4131-8e84-d8b3de43b4f3"/>
+				<reportElement x="268" y="0" width="160" height="36" uuid="1f2aff51-6f80-4a02-838c-8856dd7344ee"/>
 				<textFieldExpression><![CDATA[$F{facultad_descripcion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="449" y="16" width="76" height="20" uuid="006496d0-9e9e-4a6b-9b8d-7fe578fe8438"/>
+				<reportElement x="449" y="0" width="79" height="36" uuid="7b39eba7-4700-4976-b9af-526c7b4b75b3"/>
 				<textFieldExpression><![CDATA[$F{facultad_codigo_sicoa}]]></textFieldExpression>
 			</textField>
 		</band>
