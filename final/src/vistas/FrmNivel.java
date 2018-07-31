@@ -438,7 +438,7 @@ Menu obj=new Menu();
 
             }
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Error al buscar la nivel!!",
+            JOptionPane.showMessageDialog(this, "Error al buscar  nivel!!",
                 "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnBuscarActionPerformed

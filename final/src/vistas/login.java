@@ -5,6 +5,7 @@
  */
 package vistas;
 
+import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,7 +18,12 @@ public class login extends javax.swing.JFrame {
      * Creates new form login
      */
     public login() {
-       initComponents();
+        
+      this.setUndecorated(true);
+        initComponents();
+
+        this.setSize(410, 545);
+        this.setLayout(new BorderLayout());
         this.setLocationRelativeTo(null);
     }
 
@@ -43,7 +49,7 @@ public class login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
         getContentPane().add(txtUsuario);
-        txtUsuario.setBounds(159, 362, 160, 20);
+        txtUsuario.setBounds(159, 352, 160, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -63,7 +69,7 @@ public class login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Password);
-        Password.setBounds(159, 400, 160, 20);
+        Password.setBounds(159, 390, 160, 30);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("Iniciar Sesión");
